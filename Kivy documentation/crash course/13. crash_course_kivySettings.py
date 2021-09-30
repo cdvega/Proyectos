@@ -2,7 +2,6 @@ from kivy.app import App
 from kivy.lang import Builder
 
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.settings import SettingsWithSidebar
 
 Builder.load_string('''
 <Interface>:
@@ -20,11 +19,7 @@ class Interface(BoxLayout):
 
 class SettingsApp(App):
     def build(self):
-        self.settings_cls = SettingsWithSidebar
         return Interface()
-
-    # Settings de la app en particular
-    def build_config(self, config):
 
 
 SettingsApp().run()

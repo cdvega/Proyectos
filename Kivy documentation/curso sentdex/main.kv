@@ -1,0 +1,15 @@
+<MainScreen>: 
+    Button: 
+        on_release: root.manager.current = 'other'
+        text: 'Next screen'
+        font_size: 50
+
+
+<AnotherScreen>: 
+    Painter: 
+    Button: 
+        pos_hint: {'right': 0.95, 'top': 0.95}
+        size_hint: 0.15, 0.1
+        font_size: 25
+        text: 'Go back'
+        on_release: root.manager.current = 'main'
