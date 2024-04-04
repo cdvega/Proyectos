@@ -1,6 +1,6 @@
 import juegoCasino
 
-print('Juego de cartas hecho en Python')
+print('Juego de cartas hecho en python')
 
 juego = juegoCasino.Juego()
 
