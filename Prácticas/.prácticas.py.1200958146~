@@ -1,0 +1,22 @@
+# Calendario con los nombres de los meses
+# en español. Usa el módulo calendar
+import calendar
+
+# Lista de nombres de meses en español
+nombres_meses_esp = [
+    "", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+    "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+]
+
+calendar.month_name = nombres_meses_esp
+
+# Lista de nombres cortos de los días en español
+dias_abreviados_esp = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
+
+# Cambiar la lista de nombres cortos de los días en el módulo calendar
+calendar.day_abbr = dias_abreviados_esp
+
+# Ahora puedes usar el módulo calendar con los nombres cortos de los días en español
+
+print(calendar.month(2024, 4))
+        
