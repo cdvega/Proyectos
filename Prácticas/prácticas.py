@@ -1,14 +1,19 @@
-def square(number):
-    if not 1 <= number <= 64:
-        raise ValueError("square must be between 1 and 64")
-    return 2 ** (number - 1)
+def flatten(iterable):
+
+    def flatten_once(lista):
+        output = []
+        for element in lista:
+            if isinstance(element, list):
+                output.extend([x for x in element])
+            else:
+                output.append(element)
+
+        if any(isinstance(x, list) for x in output):
+            return flatten_once(output)
+        else:
+            return output
+
+    return flatten_once(iterable)
 
 
-def total():
-    return sum(square(number) for number in range(1, 65))
-
-
-print(total())
-
-for palabra in range(7):
-    print(palabra)    
+print(flatten([1, [2, [3, [4]], 5], 6]))
